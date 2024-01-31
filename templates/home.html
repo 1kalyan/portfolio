@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prices</title>
+</head>
+<body>
+    <h1>Stock Prices</h1>
+    <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>Previous Price</th>
+            <th>Latest Price</th>
+        </tr>
+        {% for stock in stock_data %}
+            <tr>
+                <td>{{ stock.company }}</td>
+                <td>{{ stock.previous_price }}</td>
+                <td>{{ stock.latest_price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
